@@ -8,9 +8,9 @@ class CurrentLine {
 
   factory CurrentLine.fromJson(Map<String, dynamic> json) {
     return CurrentLine(
-        order: json['ID'],
-        tag: json['UName'],
-        name: json['Email'],
-        hour: json['password']);
+        order: json['FOLIO'],
+        tag: json['ECO'],
+        name: json['TRANSPORTE'],
+        hour: json['HORA']);
   }
 }
