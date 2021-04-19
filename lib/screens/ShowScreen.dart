@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
+class ShowScreen extends StatefulWidget {
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _ShowScreenState createState() => _ShowScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _ShowScreenState extends State<ShowScreen> {
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
