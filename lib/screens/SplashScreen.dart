@@ -16,18 +16,27 @@ class _SplashScreenState extends State<SplashScreen> {
 
   startTime() async {
     var duration = Duration(seconds: 3);
-    return Timer(duration, navigatetoLoginScreen);
+    return Timer(duration, navigatetoShowScreen);
   }
 
-  navigatetoLoginScreen() {
+  navigatetoShowScreen() {
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => ShowScreen()));
   }
 
   @override
   Widget build(BuildContext context) {
+    precacheImage(AssetImage("assets/images/ebi_02.png"), context);
+    ImageProvider logo = AssetImage("assets/images/ebi_02.png");
+    Image logoImage = Image(
+      image: logo,
+      width: 250.0,
+      height: 167.0,
+    );
     return Scaffold(
         body: Container(
+      // Center is a layout widget. It takes a single child and positions it
+      // in the middle of the parent.
 
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -37,13 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
 
-      child: Center(
-        child: Image.asset(
-          'assets/images/ebi_02.png',
-          height: 140,
-          width: 110,
-        ),
-      ),
+      child: Center(child: logoImage),
     ));
   }
 }
