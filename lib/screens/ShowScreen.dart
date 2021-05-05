@@ -92,28 +92,16 @@ class _ShowScreenState extends State<ShowScreen> {
                 }
               },
             ),
-            Row(
-              children: <Widget>[
-                Flexible(
-                  child: Container(),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue, width: 1),
-                    color: Colors.lightBlue[100],
-                    shape: BoxShape.circle,
-                  ),
-                  child: IconButton(
-                    icon: const Icon(Icons.refresh_sharp),
-                    iconSize: 40,
-                    hoverColor: Colors.blueGrey[100],
-                    onPressed: () {
-                      setState(() {});
-                    },
-                  ),
-                ),
-              ],
+            Align(
+              alignment: Alignment.bottomRight,
+              child: IconButton(
+                icon: const Icon(Icons.refresh_sharp),
+                iconSize: 40,
+                hoverColor: Colors.blueGrey[100],
+                onPressed: () {
+                  setState(() {});
+                },
+              ),
             ),
           ],
         ),
