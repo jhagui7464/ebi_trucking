@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ebi_trucking">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="ebi_trucking"
+        android:label="EBI Operators"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
