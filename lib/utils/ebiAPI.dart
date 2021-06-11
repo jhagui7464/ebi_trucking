@@ -12,7 +12,7 @@ class EBIapi {
 
   Future<List<CurrentLine>> fetchTables() async {
     final response =
-        await http.get('https://ebi-api.herokuapp.com/trucktraffic');
+        await http.get('https://eb-int.com/trucktraffic');
     if (response.statusCode == 200) {
       return parseTables(response.body);
     } else {
