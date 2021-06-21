@@ -17,6 +17,25 @@ class _ShowScreenState extends State<ShowScreen> {
     currentTraffic = EBIapi().fetchTables();
   }
 
+  void _onItemTapped(int index) {
+    setState(() {});
+  }
+
+  Widget bottomMenu(BuildContext context) {
+    return new BottomNavigationBar(
+      key: Key('bottom-bar'),
+      backgroundColor: Color(0xFFE5251E),
+      items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: (Icon(Icons.refresh_sharp)),
+          label: 'Refresh',
+        ),
+      ],
+      selectedItemColor: Colors.amber[800],
+      onTap: _onItemTapped,
+    );
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -92,20 +111,10 @@ class _ShowScreenState extends State<ShowScreen> {
                 }
               },
             ),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: IconButton(
-                icon: const Icon(Icons.refresh_sharp),
-                iconSize: 40,
-                hoverColor: Colors.blueGrey[100],
-                onPressed: () {
-                  setState(() {});
-                },
-              ),
-            ),
           ],
         ),
       ),
+      bottomNavigationBar: bottomMenu(context),
     );
   }
 }
