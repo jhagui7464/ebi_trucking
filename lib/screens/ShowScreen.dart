@@ -88,7 +88,7 @@ class _ShowScreenState extends State<ShowScreen> {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Container(child: CircularProgressIndicator());
                 } else {
-                  return Text("No pending trucks.")
+                  return Text("No pending trucks.");
                 }
               },
             ),
